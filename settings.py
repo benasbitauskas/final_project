@@ -30,8 +30,6 @@ tree_names = {
     'Km': 'kiti minkštieji'
 }
 
-import pickle
-
 liquid_t = {
     'P': 87,
     'Pk': 87,
@@ -64,6 +62,3 @@ liquid_t = {
     'Km': 85
 }
 
-with open('../dictionary_1.pkl', 'wb') as pickle_out:
-    pickle.dump(liquid_t, pickle_out)
-    pickle.dump(tree_names, pickle_out)
