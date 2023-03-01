@@ -98,8 +98,7 @@ class TimberPriceCalculator:
 
 
 vol_list = []
-# avg = 70.69
-# prep = 13.90
+
 timber_price = TimberPriceCalculator(70.69, 13.90)
 trees_vol1 = Data('P', 100)
 trees_vol2 = Data('D', 60.5)
@@ -107,12 +106,3 @@ sum_lvol_total = trees_vol1.process_data() + trees_vol2.process_data()
 
 price = timber_price.process_data(calculate_type='')
 
-
-# def process_data(self, calculate_type):
-#     if calculate_type == 'single':
-#         price = self.calculate_single()
-#     elif calculate_type == 'annual':
-#         price = self.calculate_annual()
-#     else:
-#         raise ValueError('')  # TODO užpildyti error paaiškinimą kad nėra tokio pasirinkimo
-#     return price
