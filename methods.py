@@ -89,7 +89,8 @@ class TimberPriceCalculator:
         return compensation
 
     def process_data(self, calculate_type):
-            self.calculate_single()
+        if calculate_type == 'single':
+            price = self.calculate_single()
         elif calculate_type == 'annual':
             price = self.calculate_annual()
         else:
@@ -105,4 +106,6 @@ trees_vol2 = Data('D', 60.5)
 sum_lvol_total = trees_vol1.process_data() + trees_vol2.process_data()
 
 price = timber_price.process_data(calculate_type='')
+
+
 
