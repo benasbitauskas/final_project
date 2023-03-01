@@ -21,10 +21,3 @@ class TestProblems(unittest.TestCase):
             self.trees_vol4.calculate_lvolume()
 
     # def test_sum_lvolume_total(self):
-
-
-
-
-
-
-

@@ -1,81 +1,118 @@
-import pickle
+from settings import liquid_t
+from math import fsum
 
 
-# sklypo savininko duomenys
-# class Credentials:
-#     def __init__(self, name, surname):
-#         self.name = name
-#         self.surname = surname
-#
-# įvesti sklypo duomenys: kadastro Nr., savivaldybė, seniūnyja, kaimas
-# class Plot_info:
-#     def __init__(self, plot_id, municipality, eldership, village):
-#         self.plot_id = plot_id
-#         self.municipality = municipality
-#         self.eldership = eldership
-#         self.village = village
+class PlotInfo:
+    """
+    įvesti sklypo duomenys: kadastro Nr.
+    """
+
+    def __init__(self, plot_id):
+        self.plot_id = plot_id
 
 
 class Data:
+
     def __init__(self, tree_spp, volume):
-        self.vol_dict = []
-        self.sum_lvol_total = 0
-        self.t_price = 0
         self.tree_spp = tree_spp
         self.volume = volume
 
-    # apskaičiuoti paliekamą likvidinį tūrį pagal MR
-    def calculate_lvolume(self):
-        with open('dictionary_1.pkl', 'rb') as pickle_in:
-            liquid_t = pickle.load(pickle_in)
+    #
+    def _calculate_lvolume(self):
+        '''
+        apskaičiuoti paliekamą likvidinį tūrį pagal MR
+        :return:
+        '''
         if self.tree_spp not in liquid_t:
             raise KeyError
         else:
             lvolume = self.volume * liquid_t[self.tree_spp] / 100
             if lvolume > 0:
-                add_dict = {self.tree_spp: lvolume}
-                self.vol_dict.append(add_dict)
-                return round(lvolume, 2)
+                add_list = round(lvolume, 2)
+                vol_list.append(add_list)
+                return vol_list
             else:
                 raise ValueError
 
-    # apskaičiuotas paliekamamas bendras likvidinis tūris
-    def sum_lvolume_total(self):
-        for volume in self.vol_dict:
-            for tvolume in volume:
-                self.sum_lvol_total += volume[tvolume]
-        return round(self.sum_lvol_total, 2)
+    def _sum_lvolume_total(self):
+        '''
+        apskaičiuotas paliekamamas bendras likvidinis tūris
+        :return:
+        '''
+        sum_lvol_total = fsum(vol_list)
+        return round(sum_lvol_total, 2)
 
-    # medienos kaina atėmus vidutines ruošos sąnaudas
-    def timber_price(self, avg_price, prep_price):
-        self.t_price = avg_price - prep_price
-        return round(self.t_price, 2)
+    def process_data(self):
+        lvolume = self._calculate_lvolume()
+        # TODO lvolume išsaugoti į DB
+        return self._sum_lvolume_total()
 
-    # pajamos, kurios galėjo būti gautos pardavus medieną rinkoje, atimant iš jų
-    # vidutines medienos ruošos sąnaudas, apskaičiuota vienkartinė kompensacija
+
+class TimberPriceCalculator:
+    def __init__(self, avg_price, prep_price, interest=0.0):
+        self.avg_price = avg_price
+        self.prep_price = prep_price
+        self.interest = interest
+        self.t_price = 0
+
+    def timber_price(self):
+        '''
+        medienos kaina atėmus vidutines ruošos sąnaudas
+        :return:
+        '''
+        self.t_price = round(self.avg_price - self.prep_price, 2)
+        return self.t_price
+
     def calculate_single(self):
-        value_single = self.sum_lvol_total * self.t_price
-        return round(value_single, 2)
+        '''
+        pajamos, kurios galėjo būti gautos pardavus medieną rinkoje, atimant iš jų
+        vidutines medienos ruošos sąnaudas, apskaičiuota vienkartinė kompensacija
+        :return:
+        '''
+        return round(sum_lvol_total * self.t_price, 2)
 
-    # kompensuojami pajamų netekimo nuostoliai, apskaičiuojami kaip vidutinės metinės palūkanos,
-    # mokamos einamaisiais metais Lietuvos komerciniuose bankuose už ilgalaikius (nuo 2 metų) terminuotus indėlius,
-    # naujai priimtus iš ne finansų bendrovių ir namų ūkių
-    # (jeigu nurodytos rūšies indėlių palūkanų norma einamaisiais metais
-    # Lietuvos komerciniuose bankuose yra neigiama, kompensacija nemokama).
-    # Palūkanos apskaičiuojamos nuo negautų pajamų, kurios galėjo būti gautos iškirtus kirstinus medžius
-    # ir pardavus medieną rinkoje, atimant iš jų vidutines medienos ruošos sąnaudas.
 
-    def calculate_annual(self, interest):
-        if interest <= 0:
-            return f'Kompensacija nemokama'
+    def calculate_annual(self):
+        '''
+        kompensuojami pajamų netekimo nuostoliai, apskaičiuojami kaip vidutinės metinės palūkanos,
+        mokamos einamaisiais metais Lietuvos komerciniuose bankuose už ilgalaikius (nuo 2 metų) terminuotus indėlius,
+        naujai priimtus iš ne finansų bendrovių ir namų ūkių
+        (jeigu nurodytos rūšies indėlių palūkanų norma einamaisiais metais
+        Lietuvos komerciniuose bankuose yra neigiama, kompensacija nemokama).
+        Palūkanos apskaičiuojamos nuo negautų pajamų, kurios galėjo būti gautos iškirtus kirstinus medžius
+        ir pardavus medieną rinkoje, atimant iš jų vidutines medienos ruošos sąnaudas.
+        '''
+        if self.interest <= 0:
+            compensation = f'Kompensacija nemokama'
         else:
-            value_annual = self.sum_lvol_total * self.t_price * interest / 100
-            return round(value_annual, 2)
+            compensation = round(sum_lvol_total * self.t_price * self.interest / 100, 2)
+        return compensation
+
+    def process_data(self, calculate_type):
+            self.calculate_single()
+        elif calculate_type == 'annual':
+            price = self.calculate_annual()
+        else:
+            raise ValueError('')  # TODO užpildyti error paaiškinimą kad nėra tokio pasirinkimo
+        return price
 
 
+vol_list = []
+# avg = 70.69
+# prep = 13.90
+timber_price = TimberPriceCalculator(70.69, 13.90)
 trees_vol1 = Data('P', 100)
 trees_vol2 = Data('D', 60.5)
+sum_lvol_total = trees_vol1.process_data() + trees_vol2.process_data()
 
-print(trees_vol1.calculate_lvolume())
-print(trees_vol2.calculate_lvolume())
-print(Data.sum_lvolume_total)
+# price = timber_price.process_data(calculate_type='')
+
+
+# def process_data(self, calculate_type):
+#     if calculate_type == 'single':
+#         price = self.calculate_single()
+#     elif calculate_type == 'annual':
+#         price = self.calculate_annual()
+#     else:
+#         raise ValueError('')  # TODO užpildyti error paaiškinimą kad nėra tokio pasirinkimo
+#     return price

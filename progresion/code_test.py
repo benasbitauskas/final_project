@@ -52,7 +52,7 @@
 BASE_URL = 'https://www.baltpool.eu/medienos-birza/medienos-produktu-kainos/'
 BASE_URL.format(row['prefix_1'], year, row['prefix_2'])
 
-from dictionaries import liquid_t
+from settings import liquid_t
 
 
 # sklypo savininko duomenys
