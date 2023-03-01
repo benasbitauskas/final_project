@@ -105,7 +105,7 @@ trees_vol1 = Data('P', 100)
 trees_vol2 = Data('D', 60.5)
 sum_lvol_total = trees_vol1.process_data() + trees_vol2.process_data()
 
-# price = timber_price.process_data(calculate_type='')
+price = timber_price.process_data(calculate_type='')
 
 
 # def process_data(self, calculate_type):
