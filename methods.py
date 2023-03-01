@@ -11,7 +11,7 @@ class PlotInfo:
         self.plot_id = plot_id
 
 
-class Data:
+class TreeSppVolume:
 
     def __init__(self, tree_spp, volume):
         self.tree_spp = tree_spp
@@ -19,10 +19,9 @@ class Data:
 
     #
     def _calculate_lvolume(self):
-        '''
+        """
         apskaičiuoti paliekamą likvidinį tūrį pagal MR
-        :return:
-        '''
+        """
         if self.tree_spp not in liquid_t:
             raise KeyError
         else:
@@ -35,10 +34,9 @@ class Data:
                 raise ValueError
 
     def _sum_lvolume_total(self):
-        '''
+        """
         apskaičiuotas paliekamamas bendras likvidinis tūris
-        :return:
-        '''
+        """
         sum_lvol_total = fsum(vol_list)
         return round(sum_lvol_total, 2)
 
@@ -56,32 +54,25 @@ class TimberPriceCalculator:
         self.t_price = 0
 
     def timber_price(self):
-        '''
+        """
         medienos kaina atėmus vidutines ruošos sąnaudas
-        :return:
-        '''
+        """
         self.t_price = round(self.avg_price - self.prep_price, 2)
         return self.t_price
 
     def calculate_single(self):
-        '''
+        """
         pajamos, kurios galėjo būti gautos pardavus medieną rinkoje, atimant iš jų
         vidutines medienos ruošos sąnaudas, apskaičiuota vienkartinė kompensacija
-        :return:
-        '''
+        """
         return round(sum_lvol_total * self.t_price, 2)
 
-
     def calculate_annual(self):
-        '''
-        kompensuojami pajamų netekimo nuostoliai, apskaičiuojami kaip vidutinės metinės palūkanos,
-        mokamos einamaisiais metais Lietuvos komerciniuose bankuose už ilgalaikius (nuo 2 metų) terminuotus indėlius,
-        naujai priimtus iš ne finansų bendrovių ir namų ūkių
-        (jeigu nurodytos rūšies indėlių palūkanų norma einamaisiais metais
-        Lietuvos komerciniuose bankuose yra neigiama, kompensacija nemokama).
-        Palūkanos apskaičiuojamos nuo negautų pajamų, kurios galėjo būti gautos iškirtus kirstinus medžius
-        ir pardavus medieną rinkoje, atimant iš jų vidutines medienos ruošos sąnaudas.
-        '''
+        """
+        jeigu nurodytos rūšies  palūkanos neigiama, kompensacija nemokama.
+        Palūkanos apskaičiuojamos nuo negautų pajamos kurios galėjo būti gautos
+        pardavus medieną rinkoje, atimant iš jų vidutines medienos ruošos sąnaudas.
+        """
         if self.interest <= 0:
             compensation = f'Kompensacija nemokama'
         else:
@@ -101,11 +92,8 @@ class TimberPriceCalculator:
 vol_list = []
 
 timber_price = TimberPriceCalculator(70.69, 13.90)
-trees_vol1 = Data('P', 100)
-trees_vol2 = Data('D', 60.5)
+trees_vol1 = TreeSppVolume('P', 100)
+trees_vol2 = TreeSppVolume('D', 60.5)
 sum_lvol_total = trees_vol1.process_data() + trees_vol2.process_data()
 
 price = timber_price.process_data(calculate_type='')
-
-
-
