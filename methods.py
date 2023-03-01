@@ -29,7 +29,7 @@ class TreeSppVolume:
             if lvolume > 0:
                 add_list = round(lvolume, 2)
                 vol_list.append(add_list)
-                return vol_list
+                return add_list
             else:
                 raise ValueError
 
@@ -79,21 +79,49 @@ class TimberPriceCalculator:
             compensation = round(sum_lvol_total * self.t_price * self.interest / 100, 2)
         return compensation
 
-    def process_data(self, calculate_type):
-        if calculate_type == 'single':
-            price = self.calculate_single()
-        elif calculate_type == 'annual':
-            price = self.calculate_annual()
-        else:
-            raise ValueError('')  # TODO užpildyti error paaiškinimą kad nėra tokio pasirinkimo
-        return price
+    # def process_data(self, calculate_type):
+    #     if calculate_type == 'single':
+    #         price = self.calculate_single()
+    #     elif calculate_type == 'annual':
+    #         price = self.calculate_annual()
+    #     else:
+    #         raise ValueError('')  # TODO užpildyti error paaiškinimą kad nėra tokio pasirinkimo
+    #     return price
 
 
+plot_id_list = []
 vol_list = []
+plot = input('Įveskite sklypo kadastro Nr.:')
+plotid = PlotInfo(plot)
+plot_id_list.append(plot)
+print(plot_id_list)
 
-timber_price = TimberPriceCalculator(70.69, 13.90)
-trees_vol1 = TreeSppVolume('P', 100)
-trees_vol2 = TreeSppVolume('D', 60.5)
-sum_lvol_total = trees_vol1.process_data() + trees_vol2.process_data()
+# timber_price = TimberPriceCalculator(70.69, 13.90)
+# trees_vol1 = TreeSppVolume('P', 100)
+# trees_vol2 = TreeSppVolume('D', 60.5)
+# sum_lvol_total = trees_vol1.process_data() + trees_vol2.process_data()
 
-price = timber_price.process_data(calculate_type='')
+
+# while True:
+#     pasirinkimas = int(input(
+#         '1 - Įvesti pajamas, siunėją, pastabas \n2 - Įvesti išlaidas, siuntimo būdą, kas įsigyta \n3 - Gauti balansą \n4 - parodyti ataskaitą \n9 - išeiti iš programos\n'))
+#     if pasirinkimas == 1:
+#         suma = float(input('Įveskite pajamų sumą: '))
+#         siuntejas = input('Įveskite siuntėją: ')
+#         pastabos = input('Įveskite pastabas: ')
+#         biudzetas.prideti_pajamu_irasa(suma, siuntejas, pastabos)
+#     if pasirinkimas == 2:
+#         suma = float(input('Įveskite išlaidų sumą: '))
+#         atsiskaitymas = input('Įveskite atsiskaitymo būdą: ')
+#         isigyta = input('Įveskite įsigytą prekę/paslaugą: ')
+#         biudzetas.prideti_islaidu_irasa(suma, atsiskaitymas, isigyta)
+#     if pasirinkimas == 3:
+#         print(f'Balansas: {biudzetas.gauti_balansą()}')
+#     if pasirinkimas == 4:
+#         biudzetas.parodyti_ataskaita()
+#     if pasirinkimas == 9:
+#         print('Programa baigta')
+#         break
+
+
+# price = timber_price.process_data(calculate_type='')
