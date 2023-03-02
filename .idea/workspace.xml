@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="fa2f4708-54aa-4e29-8dd6-7c8b7305dc1e" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/progresion/code_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/progresion/methods2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/progresion/methods3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/progresion/scrape.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
