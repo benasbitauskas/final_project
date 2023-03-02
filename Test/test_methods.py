@@ -9,11 +9,10 @@ class TestProblems(unittest.TestCase):
         self.trees_vol2 = TreeSppVolume('D', 60.5)
         self.trees_vol3 = TreeSppVolume('B', -80)
         self.trees_vol4 = TreeSppVolume('X', 80)
-        self.trees1 = [83, 87, 82]
 
     def test_calculate_lvolume(self):
         self.assertEqual(self.trees_vol1._calculate_lvolume(), 87.0)
-        self.assertEqual(self.trees_vol2._calculate_lvolume(), 52.63)
+        self.assertEqual(self.trees_vol2._calculate_lvolume(), 52.635)
         with self.assertRaises(ValueError):
             self.trees_vol3._calculate_lvolume()
         with self.assertRaises(KeyError):
