@@ -38,3 +38,7 @@ NoneType: None
 2023-03-02 16:39:55,769:INFO:Apskaičiuota vienkartinė kompensacija 14649.0
 2023-03-02 16:40:13,259:INFO:Medienos kaina atėmus vidutines ruošos sąnaudas 57.0
 2023-03-02 16:40:13,259:INFO:Neigiamos palūkanos 0.0
+2023-03-02 17:57:11,467:INFO:Apskaičiuotas medžio rūšies tūris 87.0
+2023-03-02 17:57:11,467:INFO:Apskaičiuotas bendras paliekamas likvidinis tūris 87.0
+2023-03-02 17:57:21,488:INFO:Medienos kaina atėmus vidutines ruošos sąnaudas 57.0
+2023-03-02 17:57:21,488:INFO:Apskaičiuota vienkartinė kompensacija 4959.0

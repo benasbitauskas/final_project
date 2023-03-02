@@ -24,7 +24,7 @@ while True:
         prep_price = float(input('Įveskite vidutinę medienos ruošos kainą: '))
         single_compensation = TimberPriceCalculator(avg_price, prep_price)
         single_compensation.timber_price()
-        single_compensation.calculate_single()
+        print(f'Vienkartinė kompensacija: {single_compensation.calculate_single()} Eur' )
 
     elif choice == 3:
         avg_price = float(input('Įveskite vidutinę medienos kainą: '))
@@ -32,7 +32,7 @@ while True:
         interest = float(input('Įveskite palūkanų normą: '))
         annual_compensation = TimberPriceCalculator(avg_price, prep_price, interest)
         annual_compensation.timber_price()
-        annual_compensation.calculate_annual()
+        print(f'Kasmetinė kompensacija: {annual_compensation.calculate_single()} Eur')
 
     elif choice == 4:
         write_data = Data()
