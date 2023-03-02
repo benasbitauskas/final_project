@@ -18,7 +18,6 @@ class TreeSppVolume:
         self.tree_spp = tree_spp
         self.volume = volume
 
-    #
     def _calculate_lvolume(self):
         if self.tree_spp not in liquid_t:
             lg.logger.info(f'Įvesto medžio rūšies nėra žodyne {self.tree_spp}')

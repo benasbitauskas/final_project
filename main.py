@@ -3,6 +3,7 @@ from methods import *
 plot = input('Įveskite sklypo kadastro Nr.: \n')
 plotid = PlotInfo(plot)
 plot_id_list.append(plot)
+
 while True:
     try:
         choice = int(input(
@@ -12,6 +13,7 @@ while True:
     except ValueError:
         print('Neteisingas pasirinkimas')
         continue
+
     if choice == 1:
         tree_spp = input('Įveskite medžių rūšį: ')
         volume = float(input('Įveskite bendrą medienos tūrį: '))
@@ -24,7 +26,7 @@ while True:
         prep_price = float(input('Įveskite vidutinę medienos ruošos kainą: '))
         single_compensation = TimberPriceCalculator(avg_price, prep_price)
         single_compensation.timber_price()
-        print(f'Vienkartinė kompensacija: {single_compensation.calculate_single()} Eur' )
+        print(f'Vienkartinė kompensacija: {single_compensation.calculate_single()} Eur')
 
     elif choice == 3:
         avg_price = float(input('Įveskite vidutinę medienos kainą: '))
@@ -33,11 +35,6 @@ while True:
         annual_compensation = TimberPriceCalculator(avg_price, prep_price, interest)
         annual_compensation.timber_price()
         print(f'Kasmetinė kompensacija: {annual_compensation.calculate_single()} Eur')
-
-    elif choice == 4:
-        write_data = Data()
-        write_data.add_data
-
 
     elif choice == 9:
         print('Programa baigta')
