@@ -1,77 +1,79 @@
 from settings import liquid_t
 from math import fsum
-import logs as lg
+
+# import logs as lg
+
+tree_volume_list = []
+tree_commercial_volume_list = []
 
 
-class PlotInfo:
-    """
-    įvesti sklypo duomenys: kadastro Nr.
-    """
-
-    def __init__(self, plot_id):
-        self.plot_id = plot_id
-
-
-class TreeSppVolume:
-
-    def __init__(self, tree_spp, volume):
-        self.tree_spp = tree_spp
-        self.volume = volume
-
-    def _calculate_lvolume(self):
-        if self.tree_spp not in liquid_t:
-            lg.logger.info(f'Įvesto medžio rūšies nėra žodyne {self.tree_spp}')
-            raise KeyError
+def add_tree_volume(tree_spp, volume):
+    if tree_spp not in liquid_t:
+        raise KeyError
+    else:
+        if volume < 0:
+            raise ValueError
         else:
-            lvolume = self.volume * liquid_t[self.tree_spp] / 100
-            if lvolume > 0:
-                add_list = round(lvolume, 2)
-                vol_list.append(add_list)
-                lg.logger.info(f'Apskaičiuotas medžio rūšies tūris {lvolume}')
-                return lvolume
-            else:
-                lg.logger.info(f'Įvestas tūris negali būti neigiamas {lvolume}')
-                raise ValueError
-
-    @staticmethod
-    def _sum_lvolume_total():
-        sum_lvol_total = round(fsum(vol_list), 2)
-        sum_list[0] = sum_lvol_total
-        lg.logger.info(f'Apskaičiuotas bendras paliekamas likvidinis tūris {sum_list[0]}')
-        return sum_list[0]
+            add_list = {tree_spp: volume}
+            tree_volume_list.append(add_list)
+            return tree_volume_list
 
 
-class TimberPriceCalculator:
-    def __init__(self, avg_price, prep_price, interest=0.0):
-        self.avg_price = avg_price
-        self.prep_price = prep_price
-        self.interest = interest
-        self.t_price = 0
+def calculate_commercial_volume(tree_volume_list):
+    for volume in tree_volume_list:
+        for commercial_volume in volume:
+            calculated_volume = commercial_volume * liquid_t[tree_spp] / 100
+    return calculated_volume
 
-    def timber_price(self):
-        self.t_price = round(self.avg_price - self.prep_price, 2)
-        lg.logger.info(f'Medienos kaina atėmus vidutines ruošos sąnaudas {self.t_price}')
-        return self.t_price
 
-    def calculate_single(self):
-        single = round(sum_list[0] * self.t_price, 2)
-        lg.logger.info(f'Apskaičiuota vienkartinė kompensacija {single}')
-        return single
+# TODO pataisyti formule kad perskaiciuotu turi saraso zodyne pagal settings
 
-    def calculate_annual(self):
-        if self.interest > 0:
-            annual = round(sum_list[0] * self.t_price * self.interest / 100, 2)
-            lg.logger.info(f'Kasmetinė kompensacija {annual}')
-            return annual
-
+def add_tree_volume(tree_spp, volume):
+    if tree_spp not in liquid_t:
+        raise KeyError
+    else:
+        if volume < 0:
+            raise ValueError
         else:
-            lg.logger.info(f'Palūkanų norma 0 arba neigiama {self.interest}')
-            print(f'Kompensacija nemokama')
+            add_list = {tree_spp: volume}
+            tree_volume_list.append(add_list)
+            return tree_volume_list
 
 
-sum_list = [0.0]
-plot_id_list = []
-vol_list = []
+# TODO irasytu i nauja sarasa zodyno rakta ir reiksmes apskaiciuota turi
+
+def sum_volume_total():
+    sum_lvol_total = round(fsum(vol_list), 2)
+    return sum_lvol_total
 
 
+# TODO susumuoti tree_commercial_volume_list tūrius pagal medziu rusis
 
+def sum_volume_total():
+    sum_lvol_total = round(fsum(vol_list), 2)
+    return sum_lvol_total
+
+
+# TODO funkcija kad susumuotu visa turi
+
+
+def timber_price(average_price, preparation_price):
+    t_price = round(average_price - preparation_price, 2)
+    return t_price
+
+
+def calculate_single_compensation():
+    single_compensation = round(sum_list[0] * t_price, 2)
+    return single_compensation
+
+
+# TODO sum_list[0] pakeisti i kintamaji
+
+
+def calculate_annual_compensation(interest):
+    if interest > 0:
+        annual_compensation = round(sum_list[0] * t_price * interest / 100, 2)
+        return annual_compensation
+    else:
+        print(f'Kompensacija nemokama')
+# TODO sum_list[0] pakeisti i kintamaji
