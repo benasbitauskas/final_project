@@ -34,8 +34,10 @@ while True:
         interest = float(input('Įveskite palūkanų normą: '))
         annual_compensation = TimberPriceCalculator(avg_price, prep_price, interest)
         annual_compensation.timber_price()
-        print(f'Kasmetinė kompensacija: {annual_compensation.calculate_single()} Eur')
+        print(f'Kasmetinė kompensacija: {annual_compensation.calculate_annual()} Eur')
 
     elif choice == 9:
         print('Programa baigta')
         break
+
+

@@ -72,3 +72,6 @@ class TimberPriceCalculator:
 sum_list = [0.0]
 plot_id_list = []
 vol_list = []
+
+
+
