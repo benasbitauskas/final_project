@@ -1,5 +1,8 @@
 from settings import liquid_t
 from math import fsum
+import collections
+import functools
+import operator
 
 # import logs as lg
 
@@ -19,11 +22,17 @@ def add_tree_volume(tree_spp, volume):
             return tree_volume_list
 
 
-def calculate_commercial_volume(tree_volume_list):
-    for volume in tree_volume_list:
-        for commercial_volume in volume:
-            calculated_volume = commercial_volume * liquid_t[tree_spp] / 100
-    return calculated_volume
+def reduce_tree_volume_list(tree_volume_list):
+    new_dictionary = dict(functools.reduce(operator.add, map(collections.Counter, tree_volume_list)))
+    return new_dictionary
+
+
+def calculate_commercial_volume(new_dictionary):
+    calculated_dictionary = {}
+    if liquid_t.keys == new_dictionary.keys:
+        calculated_volume = new_dictionary.values() * liquid_t.values() / 100
+        calculated_dictionary.append
+        return calculated_volume
 
 
 # TODO pataisyti formule kad perskaiciuotu turi saraso zodyne pagal settings
@@ -43,14 +52,14 @@ def add_tree_volume(tree_spp, volume):
 # TODO irasytu i nauja sarasa zodyno rakta ir reiksmes apskaiciuota turi
 
 def sum_volume_total():
-    sum_lvol_total = round(fsum(vol_list), 2)
+    sum_lvol_total = round(fsum(tree_commercial_volume_list), 2)
     return sum_lvol_total
 
 
 # TODO susumuoti tree_commercial_volume_list tūrius pagal medziu rusis
 
 def sum_volume_total():
-    sum_lvol_total = round(fsum(vol_list), 2)
+    sum_lvol_total = round(fsum(tree_commercial_volume_list), 2)
     return sum_lvol_total
 
 
@@ -76,4 +85,15 @@ def calculate_annual_compensation(interest):
         return annual_compensation
     else:
         print(f'Kompensacija nemokama')
+
+
 # TODO sum_list[0] pakeisti i kintamaji
+
+test_list = [{'P': 100}, {'P': 100}, {'B': 100}, {'D': 100}]
+new_dict = {'P': 200, 'B': 100, 'D': 100}
+print(add_tree_volume('P', 100))
+print(add_tree_volume('P', 100))
+print(add_tree_volume('B', 100))
+print(add_tree_volume('D', 100))
+print(reduce_tree_volume_list(test_list))
+print(calculate_commercial_volume(new_dict))
