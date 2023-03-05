@@ -21,15 +21,15 @@ def add_tree_volume(tree_spp, volume):
 
 
 # 2
-def reduce_tree_volume_list(tree_volume_list):
+def reduce_tree_volume_list():
     new_dictionary = dict(functools.reduce(operator.add, map(collections.Counter, tree_volume_list)))
     return new_dictionary
 
 
 # 3
-def sum_volume_total(new_dictionary):
+def sum_volume_total():
     return sum(new_dictionary.values())
-
+#TODO fix
 
 # 4
 def calculate_commercial_volume(new_dictionary):
@@ -78,7 +78,7 @@ print(add_tree_volume('P', 100))
 print(add_tree_volume('P', 100))
 print(add_tree_volume('B', 100))
 print(add_tree_volume('D', 100))
-print(f'2: {reduce_tree_volume_list(test_list)}')
+print(f'2: {reduce_tree_volume_list()}')
 print(f'3: {sum_volume_total(new_dict)}')
 print(f'4: {calculate_commercial_volume(new_dict)}')
 print(f'5: {sum_lvolume_total(lvolume)}')
