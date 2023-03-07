@@ -1,56 +1,15 @@
-2023-03-02 11:19:31,607:INFO:Apskaičiuotas likvidinis tūris 87.0
-2023-03-02 11:21:16,207:ERROR:Žodyne nėra nurodytos MR
-NoneType: None
-2023-03-02 11:39:16,668:INFO:Apskaičiuotas likvidinis tūris 87.0
-2023-03-02 11:39:16,673:INFO:apskaičiuotas bendras paliekamas likvidinis tūris87.0
-2023-03-02 11:40:20,750:INFO:medienos kaina atėmus vidutines ruošos sąnaudas 35.0
-2023-03-02 11:58:16,574:INFO:Medienos kaina atėmus vidutines ruošos sąnaudas 55.0
-2023-03-02 11:58:16,578:INFO:Apskaičiuota vienkartinė kompensacija 0.0
-2023-03-02 12:02:23,334:INFO:Medienos kaina atėmus vidutines ruošos sąnaudas 40.0
-2023-03-02 12:02:23,334:INFO:Apskaičiuota vienkartinė kompensacija 0.0
-2023-03-02 12:13:11,143:INFO:Medienos kaina atėmus vidutines ruošos sąnaudas 40.0
-2023-03-02 12:13:11,143:INFO:Kasmetinė kompensacija 0.0
-2023-03-02 12:15:05,073:INFO:Medienos kaina atėmus vidutines ruošos sąnaudas 90.0
-2023-03-02 12:15:05,073:INFO:Apskaičiuota vienkartinė kompensacija 0.0
-2023-03-02 12:35:54,614:INFO:Medienos kaina atėmus vidutines ruošos sąnaudas 40.0
-2023-03-02 12:35:54,615:INFO:Apskaičiuota vienkartinė kompensacija 0.0
-2023-03-02 15:20:14,228:INFO:Medienos kaina atėmus vidutines ruošos sąnaudas 40.0
-2023-03-02 15:20:14,233:INFO:Apskaičiuota vienkartinė kompensacija 0.0
-2023-03-02 15:26:54,774:INFO:Medienos kaina atėmus vidutines ruošos sąnaudas 40.0
-2023-03-02 15:26:54,774:INFO:Apskaičiuota vienkartinė kompensacija 0.0
-2023-03-02 15:50:59,579:INFO:Apskaičiuotas medžio rūšies tūris87.0
-2023-03-02 15:50:59,579:INFO:Apskaičiuotas bendras paliekamas likvidinis tūris 87.0
-2023-03-02 15:51:20,069:INFO:Medienos kaina atėmus vidutines ruošos sąnaudas 50.0
-2023-03-02 15:51:20,070:INFO:Apskaičiuota vienkartinė kompensacija 4350.0
-2023-03-02 15:51:48,826:INFO:Medienos kaina atėmus vidutines ruošos sąnaudas 50.0
-2023-03-02 15:51:48,826:INFO:Kasmetinė kompensacija 87.0
-2023-03-02 16:08:16,100:INFO:Apskaičiuotas medžio rūšies tūris87.0
-2023-03-02 16:08:16,100:INFO:Apskaičiuotas bendras paliekamas likvidinis tūris 87.0
-2023-03-02 16:08:26,135:INFO:Apskaičiuotas medžio rūšies tūris1700.0
-2023-03-02 16:08:26,135:INFO:Apskaičiuotas bendras paliekamas likvidinis tūris 1787.0
-2023-03-02 16:08:37,625:INFO:Medienos kaina atėmus vidutines ruošos sąnaudas 60.0
-2023-03-02 16:08:37,625:INFO:Apskaičiuota vienkartinė kompensacija 107220.0
-2023-03-02 16:39:27,988:INFO:Apskaičiuotas medžio rūšies tūris 87.0
-2023-03-02 16:39:27,992:INFO:Apskaičiuotas bendras paliekamas likvidinis tūris 87.0
-2023-03-02 16:39:34,573:INFO:Apskaičiuotas medžio rūšies tūris 170.0
-2023-03-02 16:39:34,573:INFO:Apskaičiuotas bendras paliekamas likvidinis tūris 257.0
-2023-03-02 16:39:55,769:INFO:Medienos kaina atėmus vidutines ruošos sąnaudas 57.0
-2023-03-02 16:39:55,769:INFO:Apskaičiuota vienkartinė kompensacija 14649.0
-2023-03-02 16:40:13,259:INFO:Medienos kaina atėmus vidutines ruošos sąnaudas 57.0
-2023-03-02 16:40:13,259:INFO:Neigiamos palūkanos 0.0
-2023-03-02 17:57:11,467:INFO:Apskaičiuotas medžio rūšies tūris 87.0
-2023-03-02 17:57:11,467:INFO:Apskaičiuotas bendras paliekamas likvidinis tūris 87.0
-2023-03-02 17:57:21,488:INFO:Medienos kaina atėmus vidutines ruošos sąnaudas 57.0
-2023-03-02 17:57:21,488:INFO:Apskaičiuota vienkartinė kompensacija 4959.0
-2023-03-02 18:13:31,000:INFO:Apskaičiuotas medžio rūšies tūris 87.0
-2023-03-02 18:13:31,000:INFO:Apskaičiuotas bendras paliekamas likvidinis tūris 87.0
-2023-03-02 18:13:37,333:INFO:Apskaičiuotas medžio rūšies tūris 85.0
-2023-03-02 18:13:37,333:INFO:Apskaičiuotas bendras paliekamas likvidinis tūris 172.0
-2023-03-02 18:13:47,531:INFO:Apskaičiuotas medžio rūšies tūris 87.0
-2023-03-02 18:13:47,531:INFO:Apskaičiuotas bendras paliekamas likvidinis tūris 259.0
-2023-03-02 18:13:57,762:INFO:Medienos kaina atėmus vidutines ruošos sąnaudas 37.0
-2023-03-02 18:13:57,762:INFO:Apskaičiuota vienkartinė kompensacija 9583.0
-2023-03-02 19:05:51,771:INFO:Apskaičiuotas medžio rūšies tūris 85.0
-2023-03-02 19:05:51,771:INFO:Apskaičiuotas bendras paliekamas likvidinis tūris 85.0
-2023-03-02 19:06:03,440:INFO:Medienos kaina atėmus vidutines ruošos sąnaudas 57.0
-2023-03-02 19:06:03,441:INFO:Kasmetinė kompensacija 99.81
+2023-03-07 20:20:11,531:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 20:20:11,531:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'P': 100}]
+2023-03-07 20:20:11,531:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'P': 100}, {'B': 100}]
+2023-03-07 20:20:11,531:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'P': 100}, {'B': 100}, {'D': 100}]
+2023-03-07 20:22:15,112:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 20:22:15,112:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'P': 100}]
+2023-03-07 20:22:15,112:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'P': 100}, {'B': 100}]
+2023-03-07 20:22:15,112:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'P': 100}, {'B': 100}, {'D': 100}]
+2023-03-07 20:34:05,698:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 20:34:13,973:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 20:34:23,038:INFO:Pridėtos MR ir tūris į sąrašą [{'B': 100}]
+2023-03-07 21:10:26,287:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 21:10:26,288:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 100}]
+2023-03-07 21:12:28,964:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 21:12:28,964:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 100}]

@@ -14,3 +14,190 @@
 2023-03-02 16:42:55,194:INFO:Įvesto medžio rūšies nėra žodyne X
 2023-03-02 16:42:55,194:INFO:Apskaičiuotas bendras paliekamas likvidinis tūris 139.63
 2023-03-02 16:42:55,194:INFO:Apskaičiuotas bendras paliekamas likvidinis tūris 139.63
+2023-03-07 20:21:50,354:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 20:21:50,354:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'P': 100}]
+2023-03-07 20:21:50,354:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'P': 100}, {'B': 100}]
+2023-03-07 20:21:50,354:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'P': 100}, {'B': 100}, {'D': 100}]
+2023-03-07 20:21:50,356:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'P': 100}, {'B': 100}, {'D': 100}, {'P': 100}]
+2023-03-07 20:21:50,356:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'P': 100}, {'B': 100}, {'D': 100}, {'P': 100}, {'D': 60.5}]
+2023-03-07 20:22:18,934:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 20:22:18,934:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'P': 100}]
+2023-03-07 20:22:18,934:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'P': 100}, {'B': 100}]
+2023-03-07 20:22:18,934:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'P': 100}, {'B': 100}, {'D': 100}]
+2023-03-07 20:22:18,935:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'P': 100}, {'B': 100}, {'D': 100}, {'P': 100}]
+2023-03-07 20:22:18,935:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'P': 100}, {'B': 100}, {'D': 100}, {'P': 100}, {'D': 60.5}]
+2023-03-07 20:22:32,997:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 20:22:32,997:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'D': 60.5}]
+2023-03-07 20:23:11,081:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 20:23:11,081:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'D': 60.5}]
+2023-03-07 20:29:31,841:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 20:37:11,198:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 20:37:11,198:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}]
+2023-03-07 20:37:47,576:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 20:37:47,576:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}]
+2023-03-07 20:38:43,016:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 20:38:43,017:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}]
+2023-03-07 20:38:59,004:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 20:38:59,004:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}]
+2023-03-07 20:39:38,828:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 20:39:38,828:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}]
+2023-03-07 20:39:38,828:ERROR:Įvestas tūris negali būti neigiamas 0
+NoneType: None
+2023-03-07 20:40:09,263:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 20:40:09,263:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}]
+2023-03-07 20:40:09,263:ERROR:Įvestas tūris negali būti neigiamas 0
+NoneType: None
+2023-03-07 20:40:09,263:ERROR:Žodyne nėra nurodytos MR
+NoneType: None
+2023-03-07 21:12:41,117:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 21:12:41,118:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 100}]
+2023-03-07 21:12:41,120:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 100}, {'P': 100}]
+2023-03-07 21:14:06,604:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 21:14:06,604:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 100}]
+2023-03-07 21:14:06,606:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 100}, {'P': 100}]
+2023-03-07 21:14:41,934:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 21:14:41,935:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 100}]
+2023-03-07 21:14:41,936:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 100}, {'P': 100}]
+2023-03-07 21:14:47,218:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 21:14:47,218:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 100}]
+2023-03-07 21:14:47,220:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 100}, {'P': 100}]
+2023-03-07 21:15:01,460:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 21:15:01,460:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}]
+2023-03-07 21:15:01,461:ERROR:Įvestas tūris negali būti neigiamas 0
+NoneType: None
+2023-03-07 21:15:01,461:ERROR:Žodyne nėra nurodytos MR
+NoneType: None
+2023-03-07 21:15:37,396:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 21:15:37,396:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}]
+2023-03-07 21:15:37,396:ERROR:Įvestas tūris negali būti neigiamas 0
+NoneType: None
+2023-03-07 21:15:37,396:ERROR:Žodyne nėra nurodytos MR
+NoneType: None
+2023-03-07 21:16:02,303:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 21:16:02,303:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}]
+2023-03-07 21:16:02,303:ERROR:Įvestas tūris negali būti neigiamas 0
+NoneType: None
+2023-03-07 21:16:02,304:ERROR:Žodyne nėra nurodytos MR
+NoneType: None
+2023-03-07 21:16:19,353:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 21:16:19,353:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}]
+2023-03-07 21:16:19,353:ERROR:Įvestas tūris negali būti neigiamas 0
+NoneType: None
+2023-03-07 21:16:19,353:ERROR:Žodyne nėra nurodytos MR
+NoneType: None
+2023-03-07 21:16:40,292:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 21:16:40,292:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}]
+2023-03-07 21:16:40,293:ERROR:Įvestas tūris negali būti neigiamas 0
+NoneType: None
+2023-03-07 21:16:40,293:ERROR:Žodyne nėra nurodytos MR
+NoneType: None
+2023-03-07 21:31:17,340:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 21:31:17,340:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}]
+2023-03-07 21:31:17,340:ERROR:Įvestas tūris negali būti neigiamas 0
+NoneType: None
+2023-03-07 21:31:17,340:ERROR:Žodyne nėra nurodytos MR
+NoneType: None
+2023-03-07 21:32:10,763:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 21:32:10,763:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}]
+2023-03-07 21:32:10,763:ERROR:Įvestas tūris negali būti neigiamas 0
+NoneType: None
+2023-03-07 21:32:10,763:ERROR:Žodyne nėra nurodytos MR
+NoneType: None
+2023-03-07 21:32:33,704:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 21:32:33,704:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}]
+2023-03-07 21:32:33,704:ERROR:Įvestas tūris negali būti neigiamas 0
+NoneType: None
+2023-03-07 21:32:33,704:ERROR:Žodyne nėra nurodytos MR
+NoneType: None
+2023-03-07 21:34:10,738:INFO:Pakeista MR P
+2023-03-07 21:34:10,738:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 21:34:10,738:INFO:Pakeista MR B
+2023-03-07 21:34:10,738:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}]
+2023-03-07 21:34:10,738:INFO:Pakeista MR B
+2023-03-07 21:34:10,738:ERROR:Įvestas tūris negali būti neigiamas 0
+NoneType: None
+2023-03-07 21:34:10,739:INFO:Pakeista MR X
+2023-03-07 21:34:10,739:ERROR:Žodyne nėra nurodytos MR
+NoneType: None
+2023-03-07 21:34:10,739:INFO:Pakeista MR P
+2023-03-07 21:34:10,739:INFO:Pakeista MR BT
+2023-03-07 21:34:10,739:INFO:Pakeista MR PJ
+2023-03-07 21:34:10,739:ERROR:Įvesta MR ne string
+NoneType: None
+2023-03-07 21:34:10,739:ERROR:Įvesta MR ne string
+NoneType: None
+2023-03-07 21:36:48,721:INFO:Pakeista MR P
+2023-03-07 21:36:48,721:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 21:36:48,722:INFO:Pakeista MR B
+2023-03-07 21:36:48,722:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}]
+2023-03-07 21:36:48,722:INFO:Pakeista MR B
+2023-03-07 21:36:48,722:ERROR:Įvestas tūris negali būti neigiamas 0
+NoneType: None
+2023-03-07 21:36:48,722:INFO:Pakeista MR X
+2023-03-07 21:36:48,722:ERROR:Žodyne nėra nurodytos MR
+NoneType: None
+2023-03-07 21:36:48,723:INFO:Pakeista MR P
+2023-03-07 21:36:48,723:INFO:Pakeista MR BT
+2023-03-07 21:36:48,724:INFO:Pakeista MR PJ
+2023-03-07 21:36:48,724:ERROR:Įvesta MR ne string
+NoneType: None
+2023-03-07 21:36:48,724:ERROR:Įvesta MR ne string
+NoneType: None
+2023-03-07 21:36:59,402:INFO:Pakeista MR P
+2023-03-07 21:36:59,402:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 21:36:59,403:INFO:Pakeista MR B
+2023-03-07 21:36:59,403:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}]
+2023-03-07 21:36:59,403:INFO:Pakeista MR B
+2023-03-07 21:36:59,403:ERROR:Įvestas tūris negali būti neigiamas 0
+NoneType: None
+2023-03-07 21:36:59,403:INFO:Pakeista MR X
+2023-03-07 21:36:59,403:ERROR:Žodyne nėra nurodytos MR
+NoneType: None
+2023-03-07 21:36:59,404:INFO:Pakeista MR P
+2023-03-07 21:36:59,404:INFO:Pakeista MR BT
+2023-03-07 21:36:59,404:INFO:Pakeista MR PJ
+2023-03-07 21:36:59,404:ERROR:Įvesta MR ne string
+NoneType: None
+2023-03-07 21:36:59,404:ERROR:Įvesta MR ne string
+NoneType: None
+2023-03-07 21:36:59,404:INFO:Susumuotos vienodų MR žodynas {'P': 100, 'B': 80}
+2023-03-07 21:38:21,551:INFO:Pakeista MR P
+2023-03-07 21:38:21,551:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 21:38:21,551:INFO:Pakeista MR B
+2023-03-07 21:38:21,551:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}]
+2023-03-07 21:38:21,551:INFO:Pakeista MR P
+2023-03-07 21:38:21,551:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}, {'P': 100}]
+2023-03-07 21:38:21,551:INFO:Pakeista MR B
+2023-03-07 21:38:21,551:ERROR:Įvestas tūris negali būti neigiamas 0
+NoneType: None
+2023-03-07 21:38:21,552:INFO:Pakeista MR X
+2023-03-07 21:38:21,552:ERROR:Žodyne nėra nurodytos MR
+NoneType: None
+2023-03-07 21:38:21,553:INFO:Pakeista MR P
+2023-03-07 21:38:21,553:INFO:Pakeista MR BT
+2023-03-07 21:38:21,553:INFO:Pakeista MR PJ
+2023-03-07 21:38:21,553:ERROR:Įvesta MR ne string
+NoneType: None
+2023-03-07 21:38:21,553:ERROR:Įvesta MR ne string
+NoneType: None
+2023-03-07 21:38:21,554:INFO:Susumuotos vienodų MR žodynas {'P': 200, 'B': 80}
+2023-03-07 21:40:12,262:INFO:Pakeista MR P
+2023-03-07 21:40:12,262:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}]
+2023-03-07 21:40:12,262:INFO:Pakeista MR B
+2023-03-07 21:40:12,262:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}]
+2023-03-07 21:40:12,263:INFO:Pakeista MR P
+2023-03-07 21:40:12,263:INFO:Pridėtos MR ir tūris į sąrašą [{'P': 100}, {'B': 80}, {'P': 100}]
+2023-03-07 21:40:12,263:INFO:Pakeista MR B
+2023-03-07 21:40:12,263:ERROR:Įvestas tūris negali būti neigiamas 0
+NoneType: None
+2023-03-07 21:40:12,263:INFO:Pakeista MR X
+2023-03-07 21:40:12,263:ERROR:Žodyne nėra nurodytos MR
+NoneType: None
+2023-03-07 21:40:12,263:INFO:Pakeista MR P
+2023-03-07 21:40:12,263:INFO:Pakeista MR BT
+2023-03-07 21:40:12,264:INFO:Pakeista MR PJ
+2023-03-07 21:40:12,264:ERROR:Įvesta MR ne string
+NoneType: None
+2023-03-07 21:40:12,264:ERROR:Įvesta MR ne string
+NoneType: None
+2023-03-07 21:40:12,264:INFO:Susumuotos vienodų MR žodynas {'P': 200, 'B': 80}
