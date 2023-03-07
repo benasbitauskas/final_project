@@ -4,8 +4,17 @@ import functools
 import operator
 import logs as lg
 
+tree_volume_list = []
+timber_price = []
+
+
+def capitalize_input_tree_spp(tree_spp):
+    tree_spp = tree_spp.upper()
+    return tree_spp
+
 
 def add_tree_volume(tree_spp, volume):
+    tree_spp = capitalize_input_tree_spp(tree_spp)
     if tree_spp not in liquid_t:
         lg.logger.exception('Žodyne nėra nurodytos MR')
         raise KeyError
@@ -72,7 +81,3 @@ def calculate_annual_compensation(interest):
     else:
         lg.logger.info(f'Kompensacija nemokama')
         return f'Kompensacija nemokama'
-
-
-tree_volume_list = []
-timber_price = []
