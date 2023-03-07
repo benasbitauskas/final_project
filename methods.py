@@ -9,11 +9,17 @@ timber_price = []
 
 
 def capitalize_input_tree_spp(tree_spp):
-    tree_spp = tree_spp.upper()
-    return tree_spp
+    if not isinstance(tree_spp, str):
+        lg.logger.exception('Įvesta MR ne string')
+        raise ValueError
+    else:
+        tree_spp = tree_spp.upper()
+        lg.logger.info(f'Pakeista MR {tree_spp}')
+        return tree_spp
 
 
 def add_tree_volume(tree_spp, volume):
+    lvolume = 0
     tree_spp = capitalize_input_tree_spp(tree_spp)
     if tree_spp not in liquid_t:
         lg.logger.exception('Žodyne nėra nurodytos MR')
