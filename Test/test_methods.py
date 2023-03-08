@@ -25,23 +25,25 @@ class TestProblems(unittest.TestCase):
     def test_reduce_tree_volume_list(self):
         self.assertEqual({'B': 80, 'P': 200}, reduce_tree_volume_list())
 
+    def test_sum_volume(self):
+        self.assertEqual(280, sum_volume())
 
-# test_list = [{'P': 100}, {'P': 100}, {'B': 100}, {'D': 100}]
-# new_dict = {'P': 200, 'B': 100, 'D': 100}
-# average_price = 70.69
-# preparation_price = 13.90
-# lvolume = {'P': 174.0, 'B': 83.0, 'D': 87.0}
-# lvolume_total = 344
-# t_price = 56.79
-# interest = 2.06
-# print(add_tree_volume('P', 100))
-# print(add_tree_volume('P', 100))
-# print(add_tree_volume('B', 100))
-# print(add_tree_volume('D', 100))
-# print(f'2: {reduce_tree_volume_list()}')
-# print(f'3: {sum_volume_total()}')
-# print(f'4: {calculate_commercial_volume()}')
-# print(f'5: {sum_cvolume_total()}')
-# print(f'6: {calculate_timber_price(average_price, preparation_price)}')
-# print(f'7: {calculate_single_compensation()}')
-# print(f'8: {calculate_annual_compensation(interest)}')
+    def test_calculate_commercial_volume(self):
+        self.assertEqual({'B': 66.4, 'P': 174.0}, calculate_commercial_volume())
+
+    def test_sum_cvolume(self):
+        self.assertEqual(240.4, sum_cvolume_total())
+
+    def test_calculate_timber_price(self):
+        self.assertEqual(56.79, calculate_timber_price(70.69, 13.90))
+
+    def test_calculate_single_compensation(self):
+        self.assertEqual(13652.32, calculate_single_compensation(70.69, 13.90))
+        self.assertEqual(16993.88, calculate_single_compensation(70.69, 0))
+        self.assertEqual(13702.8, calculate_single_compensation(70, 13))
+
+    def test_calculate_annual_compensation(self):
+        self.assertEqual('Kompensacija nemokama', calculate_annual_compensation(0, 70.69, 13.90))
+        self.assertEqual('Kompensacija nemokama', calculate_annual_compensation(-2, 70.69, 0))
+        self.assertEqual(282.28, calculate_annual_compensation(2.06, 70, 13))
+        self.assertEqual(137.03, calculate_annual_compensation(1, 70, 13))

@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa2f4708-54aa-4e29-8dd6-7c8b7305dc1e" name="Changes" comment="Pakeitimai 3" />
+    <list default="true" id="fa2f4708-54aa-4e29-8dd6-7c8b7305dc1e" name="Changes" comment="Pakeitimai 3">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/methods.log" beforeDir="false" afterPath="$PROJECT_DIR$/Test/methods.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/test_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/test_methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/methods.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,5 +122,16 @@
     <MESSAGE value="Pakeitimai 2" />
     <MESSAGE value="Pakeitimai 3" />
     <option name="LAST_COMMIT_MESSAGE" value="Pakeitimai 3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

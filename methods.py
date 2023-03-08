@@ -39,10 +39,9 @@ def reduce_tree_volume_list():
     new_dictionary = dict(functools.reduce(operator.add, map(collections.Counter, tree_volume_list)))
     lg.logger.info(f'Susumuotos vienodų MR žodynas {new_dictionary}')
     return new_dictionary
-    # 3
 
 
-def sum_volume_total():
+def sum_volume():
     new_dictionary = reduce_tree_volume_list()
     volume_total = sum(new_dictionary.values())
     lg.logger.info(f'Bendras tūris {volume_total}')
@@ -71,17 +70,19 @@ def calculate_timber_price(average_price, preparation_price):
     return t_price
 
 
-def calculate_single_compensation():
+def calculate_single_compensation(average_price, preparation_price):
+    t_price = calculate_timber_price(average_price, preparation_price)
     cvolume_sum = sum_cvolume_total()
-    single_compensation = round(cvolume_sum * timber_price[0], 2)
+    single_compensation = round(cvolume_sum * t_price, 2)
     lg.logger.info(f'Apskaičiuota vienakartinė kompensacija {single_compensation}')
     return single_compensation  # TODO fix
 
 
-def calculate_annual_compensation(interest):
+def calculate_annual_compensation(interest, average_price, preparation_price):
+    t_price = calculate_timber_price(average_price, preparation_price)
     cvolume_sum = sum_cvolume_total()
     if interest > 0:
-        annual_compensation = round(cvolume_sum * timber_price[0] * interest / 100, 2)
+        annual_compensation = round(cvolume_sum * t_price * interest / 100, 2)
         lg.logger.info(f'Apskaičiuota kasmetinė kompensacija {annual_compensation}')
         return annual_compensation  # TODO fix
     else:
