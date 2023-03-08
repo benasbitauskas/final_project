@@ -1,14 +1,19 @@
 from methods import *
 
-plot = input('Įveskite sklypo kadastro Nr.: \n')
-plotid = PlotInfo(plot)
-plot_id_list.append(plot)
+# plot = input('Įveskite sklypo kadastro Nr.: \n')
+
+avg_price = 0
+prep_price = 0
 
 while True:
     try:
         choice = int(input(
-            f'1 - Įvesti medžių rūšis ir tūrį \n2 - Skaičiuoti vienkartinę kompensaciją '
-            f'\n3 - Skaičiuoti kasmetinę kompensaciją \n'
+            f'1 - Įvesti medžių rūšis ir tūrį \n'
+            f'2 - Apskačiuoti likvidinį tūri \n'
+            f'3 - Apskaičiuoti medienos kainą \n'
+            f'4 - Skaičiuoti vienkartinę kompensaciją \n'
+            f'5 - Skaičiuoti kasmetinę kompensaciją \n'
+            f'6 - Atakskaita \n'
             f'9 - išeiti iš programos\n'))
     except ValueError:
         print('Neteisingas pasirinkimas')
@@ -17,27 +22,28 @@ while True:
     if choice == 1:
         tree_spp = input('Įveskite medžių rūšį: ')
         volume = float(input('Įveskite bendrą medienos tūrį: '))
-        tree_volume = TreeSppVolume(tree_spp, volume)
-        tree_volume._calculate_lvolume()
-        tree_volume._sum_lvolume_total()
+        tree_volume = add_tree_volume(tree_spp, volume)
 
     elif choice == 2:
-        avg_price = float(input('Įveskite vidutinę medienos kainą: '))
-        prep_price = float(input('Įveskite vidutinę medienos ruošos kainą: '))
-        single_compensation = TimberPriceCalculator(avg_price, prep_price)
-        single_compensation.timber_price()
-        print(f'Vienkartinė kompensacija: {single_compensation.calculate_single()} Eur')
+        print(f'Likvidinis tūris {calculate_commercial_volume()}')
 
     elif choice == 3:
         avg_price = float(input('Įveskite vidutinę medienos kainą: '))
         prep_price = float(input('Įveskite vidutinę medienos ruošos kainą: '))
+        timber_price = calculate_timber_price(avg_price, prep_price)
+        print(f'Medienos kaina: {timber_price} Eur')
+
+    elif choice == 4:
+        print(f'Vienkartinė kompensacija: {calculate_single_compensation(avg_price, prep_price)} Eur')
+
+
+    elif choice == 5:
         interest = float(input('Įveskite palūkanų normą: '))
-        annual_compensation = TimberPriceCalculator(avg_price, prep_price, interest)
-        annual_compensation.timber_price()
-        print(f'Kasmetinė kompensacija: {annual_compensation.calculate_annual()} Eur')
+        print(f'Kasmetinė kompensacija: {calculate_annual_compensation(interest, avg_price, prep_price)} Eur')
+
+    elif choice == 6:
+        print(summary())
 
     elif choice == 9:
         print('Programa baigta')
         break
-
-

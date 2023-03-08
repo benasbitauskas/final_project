@@ -54,7 +54,6 @@ def calculate_commercial_volume():
     return calculated_cvolume
 
 
-# 5
 def sum_cvolume_total():
     calculated_cvolume = calculate_commercial_volume()
     cvolume_sum = sum(calculated_cvolume.values())
@@ -73,7 +72,7 @@ def calculate_single_compensation(average_price, preparation_price):
     cvolume_sum = sum_cvolume_total()
     single_compensation = round(cvolume_sum * t_price, 2)
     lg.logger.info(f'Apskaičiuota vienakartinė kompensacija {single_compensation}')
-    return single_compensation  # TODO fix
+    return single_compensation
 
 
 def calculate_annual_compensation(interest, average_price, preparation_price):
@@ -86,3 +85,9 @@ def calculate_annual_compensation(interest, average_price, preparation_price):
     else:
         lg.logger.info(f'Kompensacija nemokama')
         return f'Kompensacija nemokama'
+
+
+def summary():
+    return f'MR ir tūris {reduce_tree_volume_list()}\nLikvidinis tūris {calculate_commercial_volume()}\n'
+    f'Bendras likvidinis tūris {sum_cvolume_total()}\nMedienos kaina {calculate_timber_price()}\n'
+    f'Kompensacija {calculate_single_compensation()} {calculate_annual_compensation()}'
