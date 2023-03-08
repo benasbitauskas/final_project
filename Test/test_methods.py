@@ -43,7 +43,8 @@ class TestProblems(unittest.TestCase):
         self.assertEqual(13702.8, calculate_single_compensation(70, 13))
 
     def test_calculate_annual_compensation(self):
-        self.assertEqual('Kompensacija nemokama', calculate_annual_compensation(0, 70.69, 13.90))
-        self.assertEqual('Kompensacija nemokama', calculate_annual_compensation(-2, 70.69, 0))
         self.assertEqual(282.28, calculate_annual_compensation(2.06, 70, 13))
         self.assertEqual(137.03, calculate_annual_compensation(1, 70, 13))
+        self.assertEqual('Kompensacija nemokama', calculate_annual_compensation(0, 70.69, 13.90))
+        self.assertEqual('Kompensacija nemokama', calculate_annual_compensation(-2, 70.69, 0))
+

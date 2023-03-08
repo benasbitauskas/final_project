@@ -5,7 +5,6 @@ import operator
 import logs as lg
 
 tree_volume_list = []
-timber_price = []
 
 
 def capitalize_input_tree_spp(tree_spp):
@@ -59,14 +58,13 @@ def calculate_commercial_volume():
 def sum_cvolume_total():
     calculated_cvolume = calculate_commercial_volume()
     cvolume_sum = sum(calculated_cvolume.values())
-    lg.logger.info(f'apskaičiuotas bendras paliekamas likvidinis tūris{cvolume_sum}')
+    lg.logger.info(f'Apskaičiuotas bendras paliekamas likvidinis tūris {cvolume_sum}')
     return cvolume_sum
 
 
 def calculate_timber_price(average_price, preparation_price):
     t_price = round(average_price - preparation_price, 2)
-    lg.logger.info(f'medienos kaina atėmus vidutines ruošos sąnaudas {t_price}')
-    timber_price.append(t_price)
+    lg.logger.info(f'Medienos kaina atėmus vidutines ruošos sąnaudas {t_price}')
     return t_price
 
 
@@ -84,7 +82,7 @@ def calculate_annual_compensation(interest, average_price, preparation_price):
     if interest > 0:
         annual_compensation = round(cvolume_sum * t_price * interest / 100, 2)
         lg.logger.info(f'Apskaičiuota kasmetinė kompensacija {annual_compensation}')
-        return annual_compensation  # TODO fix
+        return annual_compensation
     else:
         lg.logger.info(f'Kompensacija nemokama')
         return f'Kompensacija nemokama'
