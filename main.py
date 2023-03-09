@@ -5,6 +5,8 @@ from methods import *
 avg_price = 0
 prep_price = 0
 
+data = Data()
+
 while True:
     try:
         choice = int(input(
@@ -34,16 +36,17 @@ while True:
         print(f'Medienos kaina: {timber_price} Eur')
 
     elif choice == 4:
-        print(f'Vienkartinė kompensacija: {calculate_single_compensation(avg_price, prep_price)} Eur')
-
+        single_compensation = calculate_single_compensation(avg_price, prep_price)
+        print(f'Vienkartinė kompensacija: {single_compensation} Eur')
 
     elif choice == 5:
         interest = float(input('Įveskite palūkanų normą: '))
-        print(f'Kasmetinė kompensacija: {calculate_annual_compensation(interest, avg_price, prep_price)} Eur')
+        annual_compensation = calculate_annual_compensation(interest, avg_price, prep_price)
+        print(f'Kasmetinė kompensacija: {annual_compensation} Eur')
 
     elif choice == 6:
-        print(summary())
-
+        data.add_data(tree_volume, timber_price, single_compensation, annual_compensation)
+        #TODO FIX
     elif choice == 9:
         print('Programa baigta')
         break

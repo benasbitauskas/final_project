@@ -52,3 +52,15 @@
 2023-03-08 21:30:34,277:INFO:Apskaičiuotas likvidinis tūris {'P': 87.0, 'E': 85.0}
 2023-03-08 21:30:34,277:INFO:Apskaičiuotas bendras paliekamas likvidinis tūris 172.0
 2023-03-08 21:30:34,278:INFO:Kompensacija nemokama
+2023-03-09 21:46:49,934:INFO:Pakeista MR E
+2023-03-09 21:46:49,934:INFO:Pridėtos MR ir tūris į sąrašą [{'E': 100.0}]
+2023-03-09 21:46:55,516:INFO:Pakeista MR P
+2023-03-09 21:46:55,517:INFO:Pridėtos MR ir tūris į sąrašą [{'E': 100.0}, {'P': 100.0}]
+2023-03-09 21:47:02,625:INFO:Susumuotos vienodų MR žodynas {'E': 100.0, 'P': 100.0}
+2023-03-09 21:47:02,625:INFO:Apskaičiuotas likvidinis tūris {'E': 85.0, 'P': 87.0}
+2023-03-09 21:47:09,496:INFO:Medienos kaina atėmus vidutines ruošos sąnaudas 57.0
+2023-03-09 21:47:11,821:INFO:Medienos kaina atėmus vidutines ruošos sąnaudas 57.0
+2023-03-09 21:47:11,821:INFO:Susumuotos vienodų MR žodynas {'E': 100.0, 'P': 100.0}
+2023-03-09 21:47:11,821:INFO:Apskaičiuotas likvidinis tūris {'E': 85.0, 'P': 87.0}
+2023-03-09 21:47:11,822:INFO:Apskaičiuotas bendras paliekamas likvidinis tūris 172.0
+2023-03-09 21:47:11,822:INFO:Apskaičiuota vienakartinė kompensacija 9804.0
