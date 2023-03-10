@@ -104,7 +104,7 @@ def calculate_annual_compensation(interest, average_price, preparation_price):
 
 class Data:
     @staticmethod
-    def add_data(tree_volume, timber_price, annual_compensation, single_compensation):
-        info = Info(tree_volume, timber_price, annual_compensation, single_compensation)
+    def add_data(timber_price, annual_compensation, single_compensation):
+        info = Info(timber_price, annual_compensation, single_compensation)
         session.add(info)
         session.commit()

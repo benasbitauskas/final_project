@@ -15,8 +15,10 @@ while True:
             f'3 - Apskaičiuoti medienos kainą \n'
             f'4 - Skaičiuoti vienkartinę kompensaciją \n'
             f'5 - Skaičiuoti kasmetinę kompensaciją \n'
-            f'6 - Atakskaita \n'
-            f'9 - išeiti iš programos\n'))
+            f'6 - Įrašyti į DB \n'
+            f'7 - Peržiūrėti \n'
+            f'9 - išeiti iš programos\n'
+        ))
     except ValueError:
         print('Neteisingas pasirinkimas')
         continue
@@ -45,8 +47,8 @@ while True:
         print(f'Kasmetinė kompensacija: {annual_compensation} Eur')
 
     elif choice == 6:
-        data.add_data(tree_volume, timber_price, single_compensation, annual_compensation)
-        #TODO FIX
+        data.add_data(timber_price, single_compensation, annual_compensation)
+
     elif choice == 9:
         print('Programa baigta')
         break
